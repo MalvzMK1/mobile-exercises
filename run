@@ -1,0 +1,10 @@
+#!/bin/bash
+
+base_file="ex$1.kt" 
+compiled_file="Ex$1Kt.class" 
+
+if ! [ -f $compiled_file ]; then
+  kotlinc $base_file
+fi
+
+kotlin $compiled_file
